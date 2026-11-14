@@ -94,6 +94,7 @@ nav {
   font-size: 14px;
   transition: .2s;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-green {
@@ -383,7 +384,9 @@ footer p {
 <header>
   <div class="container">
     <nav>
-      <a href="index.html" class="logo">Simply<span>Verify</span></a>
+      <a href="index.html" class="logo">
+        Simply<span>Verify</span>
+      </a>
 
       <div class="nav-links">
         <a href="#services">Services</a>
@@ -603,6 +606,15 @@ footer p {
 <script>
 document.getElementById("year").textContent =
   new Date().getFullYear();
+</script>
+
+<script type="module">
+import { supabase } from "./supabase.js";
+
+// Initialize the SimplyVerify Supabase client.
+window.simplyVerifySupabase = supabase;
+
+console.log("SimplyVerify Supabase client initialized.");
 </script>
 
 </body>
